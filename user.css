@@ -1,0 +1,136 @@
+body {
+    background: #CCCCFF;
+    text-align: center;
+
+}
+
+a {
+    font-size: 24px;
+    border: black 3px solid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 10px;
+}
+a:hover {
+    background: dimgray;
+}
+
+button {
+    background-color: black;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+h1 {
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    display: block;
+}
+button:hover {
+    background: dimgrey;
+
+}
+h2 {
+    width: 350px;
+    height: 75px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 100px;
+}
+h4 {
+    width: 350px;
+    height: 75px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+    margin-left: 580px;
+    margin-top: -96px;
+
+
+
+}
+h5 {
+    width: 350px;
+    height: 75px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+    margin-left: 1050px;
+    margin-top: -108px;
+}
+h6 {
+    width: 350px;
+    height: 75px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+    margin-left: 330px;
+}
+h3 {
+    width: 350px;
+    height: 75px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+    margin-left: 820px;
+    margin-top: -132px;
+}
+p {
+    width: 400px;
+    height: 200px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 25px;
+    margin-left: 550px;
+}
+
+.click {
+    width: 100px;
+    text-align: center;
+    display: flex;
+}

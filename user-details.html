@@ -1,10 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
 </head>
+
 <body>
-$END$
+<button class="click" onclick="redirectToPage()">Prev</button>
+<h1>User Details</h1>
+<div id="data"></div>
+
+<button id="posts">Post of Current User</button>
+
+<script>
+
+    document.getElementById("posts").addEventListener("click", getUserPosts);
+    function getUserPosts() {
+        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+            .then(response => response.json())
+            .then(posts => displayUserPosts(posts));
+
+    }
+    function displayUserPosts(posts) {
+        for (const post of posts) {
+            let div = document.createElement(`div`);
+            div.classList.add('post');
+            let a = document.createElement('a');
+            a.innerText = `${post.id} ${post.title}`;
+            a.href = 'post-details.html?data=' + JSON.stringify(post);
+            div.appendChild(a);
+            document.body.appendChild(div);
+        }
+    }
+
+    let url = new URL(location.href)
+    let json = url.searchParams.get('data')
+    let user = JSON.parse(json)
+    console.log(user)
+
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/`)
+        .then(response => response.json())
+        .then(data => {
+            const dataElement = document.getElementById('data');
+            dataElement.innerHTML = `<h2>id: ${data.id} Name: ${data.name}</h2><h4>username: ${data.username}</h4>
+            <h5>website: ${user.website}</h5> <h6>phone: ${data.phone}</h6> <h3>email: ${data.email}</h3>
+            <p>Company : ${user.company.name} catchPhrase: ${user.company.catchPhrase} bs: ${user.company.bs}</p>
+            <p>Adress: ${user.address.street} suite: ${user.address.suite} city: ${user.address.city} zipcode: ${user.address.zipcode} geo:${user.address.geo.lat} ${user.address.geo.lng}</p>`;
+        })
+        .catch(error => console.error(error));
+
+
+    function redirectToPage() {
+        window.location.href = "index.html";
+    }
+</script>
+
+
 </body>
 </html>
