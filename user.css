@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    font-size: 24px;
+    font-size: 12px;
     border: black 3px solid;
     justify-content: center;
     justify-items: center;
@@ -20,6 +20,7 @@ a {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     margin: 10px;
+
 }
 a:hover {
     background: dimgray;
@@ -51,7 +52,7 @@ button:hover {
     background: dimgrey;
 
 }
-h2 {
+h2, h3, h4, h5, h6 {
     width: 350px;
     height: 75px;
     background: black;
@@ -60,59 +61,25 @@ h2 {
     display: flex;
     justify-content: center;
     justify-items: center;
+    font-size: 25px;
+    flex-direction: column;
+}
+
+h2 {
     margin-left: 100px;
 }
 h4 {
-    width: 350px;
-    height: 75px;
-    background: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    font-size: 25px;
     margin-left: 580px;
     margin-top: -96px;
-
-
-
 }
 h5 {
-    width: 350px;
-    height: 75px;
-    background: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    font-size: 25px;
     margin-left: 1050px;
     margin-top: -108px;
 }
 h6 {
-    width: 350px;
-    height: 75px;
-    background: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    font-size: 25px;
     margin-left: 330px;
 }
 h3 {
-    width: 350px;
-    height: 75px;
-    background: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    font-size: 25px;
     margin-left: 820px;
     margin-top: -132px;
 }
@@ -127,10 +94,19 @@ p {
     justify-items: center;
     font-size: 25px;
     margin-left: 550px;
+    flex-direction: column;
 }
 
 .click {
     width: 100px;
     text-align: center;
     display: flex;
+}
+
+.post {
+    display: inline-grid;
+    height: 100px;
+    width: 20%;
+    grid-template-rows: repeat(1,3fr);
+
 }

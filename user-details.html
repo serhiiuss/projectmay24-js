@@ -30,7 +30,7 @@
             let div = document.createElement(`div`);
             div.classList.add('post');
             let a = document.createElement('a');
-            a.innerText = `${post.id} ${post.title}`;
+            a.innerText = `${post.title}`;
             a.href = 'post-details.html?data=' + JSON.stringify(post);
             div.appendChild(a);
             document.body.appendChild(div);
@@ -49,8 +49,8 @@
             const dataElement = document.getElementById('data');
             dataElement.innerHTML = `<h2>id: ${data.id} Name: ${data.name}</h2><h4>username: ${data.username}</h4>
             <h5>website: ${user.website}</h5> <h6>phone: ${data.phone}</h6> <h3>email: ${data.email}</h3>
-            <p>Company : ${user.company.name} catchPhrase: ${user.company.catchPhrase} bs: ${user.company.bs}</p>
-            <p>Adress: ${user.address.street} suite: ${user.address.suite} city: ${user.address.city} zipcode: ${user.address.zipcode} geo:${user.address.geo.lat} ${user.address.geo.lng}</p>`;
+            <p>Company:<br> ${user.company.name} catchPhrase: ${user.company.catchPhrase} bs: ${user.company.bs}</p>
+            <p>Adress:<br> ${user.address.street} suite: ${user.address.suite} city: ${user.address.city} zipcode: ${user.address.zipcode} geo:${user.address.geo.lat} ${user.address.geo.lng}</p>`;
         })
         .catch(error => console.error(error));
 
